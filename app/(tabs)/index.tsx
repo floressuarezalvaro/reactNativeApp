@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { WebView, WebViewMessageEvent } from "react-native-webview";
 import { Image, StyleSheet, View } from "react-native";
 
@@ -6,12 +6,6 @@ import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-
-// import UXTScreen from "@/components/UXTScreen";
-
-const APPLICATION_TOKEN = "your_application_token";
-const ACCESS_TOKEN = "your_access_token";
-const USER_TOKEN = "your_user_token";
 
 const injectedScript = `
   (function() {
@@ -54,7 +48,7 @@ export default function HomeScreen() {
         <WebView
           originWhitelist={["*"]}
           source={{
-            uri: `https://cardholder-ui-support.github.io/?applicationToken=${APPLICATION_TOKEN}&accessToken=${ACCESS_TOKEN}&userToken=${USER_TOKEN}`,
+            uri: `file:///Users/afloressuarez/Documents/MarqetaProjects/ProductEnablementApp/index.html`,
           }}
           javaScriptEnabled={true}
           domStorageEnabled={true}
