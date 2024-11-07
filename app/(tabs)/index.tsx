@@ -44,7 +44,6 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <View style={styles.webViewContainer}>
-        {/* <UXTScreen /> */}
         <WebView
           originWhitelist={["*"]}
           source={{
